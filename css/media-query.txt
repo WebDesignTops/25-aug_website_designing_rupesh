@@ -1,0 +1,8 @@
+Screen Size- Resolution
+
+phone		-	0px to 480px
+smart-phone	-480px to 576px
+tablet		-	576px to 768px
+tablet horizontal	-768px to 992px
+laptop/computer	-992px to 1200px
+smart tv		-1200px to 1400px
