@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chain method</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+	<h1>This is h1 tag</h1>
+	<h2>This is h2 tag</h2>
+	<h3>This is h3 tag</h3>
+	<h4>This is h4 tag</h4>
+	<h5>This is h5 tag</h5>
+
+
+	<button>click here</button>
+
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("h1,h2,h3,h4,h5").css("color","blue")
+		})
+	});
+</script>
+</html>

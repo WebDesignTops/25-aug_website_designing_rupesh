@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Remove Class</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<style type="text/css">
+		.a{
+			width: 200px;
+			height: 300px;
+			background: coral;
+			color: blue;
+			font-size: 40px;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="a">
+		This is remove class
+	</div>
+	<button>Remove Class</button>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("div").removeClass();
+		})
+	});
+</script>
+</html>
