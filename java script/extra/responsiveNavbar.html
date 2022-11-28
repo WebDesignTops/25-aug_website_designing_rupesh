@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive Navbar</title>
+	 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Navbar Responsive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+    	*{
+    		margin: 0px;
+    		padding: 0px;
+    		box-sizing: border-box;
+    	}
+    	header{
+    		width: 100%;
+    		height: 120px;
+    		border: 1px solid black;
+    		display: flex;
+    	}
+    	.logo{
+    		width: 15%;
+    		height: inherit;
+    	}
+    	.logo img{
+    		width: 100%;
+    		height: 100%
+    	}
+    	nav{
+    		width: 85%;
+
+    	}
+    	nav ul{
+    		float: right;
+    	}
+    	nav ul li{
+    		display: inline-block;
+    		font-size: 40px;
+    		padding: 10px;
+    		position: relative;
+    	}
+    	li::after
+    	{
+    		content: "";
+    		position: absolute;
+    		/*top: 5;*/
+    		bottom: 0;
+    		left: 2px;
+    		width: 0px;
+    		height: 5px;
+    		background: red;
+    		transition: 5s;
+    		margin: auto;
+
+    	}
+    	li:hover::after{
+    		width: 80%;
+    	}
+    	.fa{
+    		display: none;
+    	}
+
+    	@media(max-width: 480px)
+    	{
+    		nav{
+    			width: 100%;
+    			height: auto;
+    			position: absolute;
+    			top: 130px;
+    			left: -1000px;
+    			transition: 5s;
+    			
+    			/*border: 1px solid black;*/
+    		}
+    		nav ul{
+
+    			/*border: 1px solid black;*/
+    			width: 100%;
+    			text-align: center;
+    		}
+    		nav ul li{
+    			border: 1px solid black;
+    			display: block;
+    			font-size: 25px;
+    		}
+    		#start{
+    			display: block;
+    			position: absolute;
+    			right: 10px;
+    			top: 40px;
+    		}
+    		#close{
+    			display: block;
+    			position: absolute;
+    			right: 10px;
+    			top: 60px;
+    		}
+    	}
+    </style>
+</head>
+<body>
+
+	<header>
+		<div class="logo">
+			<img src="logo2.jpg">
+		</div>
+		<i class="fa fa-bars" id="start" onclick="show()"></i>
+		<nav id="menu">
+			<ul>
+				<li>Home</li>
+				<li>About</li>
+				<li>Product</li>
+				<li>Contact</li>
+				<li>Info</li>
+
+			</ul>
+		</nav>
+		<i class="fa fa-close" id="close" onclick="hide()"></i>
+	</header>
+
+</body>
+<script type="text/javascript">
+	function show(){
+		document.getElementById('menu').style.left=0;
+	}
+	function hide(){
+		document.getElementById('menu').style.left="-480px";
+	}
+</script>
+</html>
+
+
+
+

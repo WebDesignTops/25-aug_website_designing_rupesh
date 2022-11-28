@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>animation slider</title>
+	<style type="text/css">
+		div{
+			/*width: 100%;*/
+			height: 600px;
+			background-image: url(burger.jpg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			animation: slider;
+			animation-direction: normal;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+
+		}
+		@keyframes slider{
+			0%{
+				background-image: url(burger.jpg);
+			}
+			25%
+			{
+				background-image: url(fries.jpg)
+			}
+			50%{
+				background-image: url(pasta.jpg);
+			}
+			75%{
+				background-image: url(chips.jpg);
+			}
+			100%{
+				background-image: url(roll.jpg);
+			}
+		}
+	</style>
+</head>
+<body>
+
+
+
+	<div></div>
+
+</body>
+</html>

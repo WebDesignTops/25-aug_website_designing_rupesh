@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Responsive nav</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		header{
+			width: 100%;
+			height: 120px;
+			border:1px solid black;
+		
+		}
+		div{
+			width: 15%;
+			height: inherit;
+			float: left
+		}
+		div img{
+			width: 100%;
+			height: 100%;
+		}
+		nav{
+			/*width: 84%;*/
+
+			border:1px solid black;
+		}
+		nav ul{
+			float: right;
+			
+		}
+		nav ul li{
+			display: inline-block;
+			list-style: none;
+			padding: 15px;
+			font-size: 40px
+
+		}
+		.fa{
+			display: none;
+		}
+
+		@media(max-width: 480px)
+		{
+			header{
+				position: relative;
+			}
+
+			div{
+				width: 25%;
+			}
+			nav{
+				width: 100%;
+			}
+			nav ul{
+				text-align: center;
+				width: 90%;
+				position: absolute;
+				top: -220px;
+				left:0;
+				border:1px solid black;
+			}
+			nav ul li
+			{
+				font-size: 15px;
+				display: block;
+			}
+			#close{
+				display: block;
+				position: absolute;
+				right: 10px;
+				top: 30px;
+			}
+			#open{
+				display: block;
+				position: absolute;
+				right: 10px;
+				top: 50px;
+			}
+		}
+	</style>
+</head>
+<body>
+
+
+	<header>
+		<div>
+			<img src="logo1.jpg">
+		</div>
+		<i class="fa fa-close" id="close" onclick="hide()"></i>
+		<nav id="menu">
+			<ul>
+				<li>Home</li>
+				<li>about</li>
+				<li>service</li>
+				<li>contact</li>
+
+			</ul>
+		</nav>
+		<i class="fa fa-bars" id="open" onclick="show()"></i>
+	</header>
+
+</body>
+<script type="text/javascript">
+	
+		
+		function show(){
+			document.getElementById('menu').style.top="0";
+		}
+		function hide(){
+			document.getElementById('menu').style.top="-220px";
+		}
+</script>
+</html>
