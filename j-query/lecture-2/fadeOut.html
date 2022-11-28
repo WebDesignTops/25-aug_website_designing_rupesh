@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fade in</title>
+	<style type="text/css">
+		.a{
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+			background: orange;
+		}
+		.b{
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+			background: white;
+		}
+		.c{
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+			background: green;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="a"></div>
+	<div class="b"></div>
+	<div class="c"></div>
+	<br><br>
+		<button>Fade Out</button>
+
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("button").click(function(){
+			$(".a").fadeOut(6000)
+			$(".b").fadeOut(4000)
+			$(".c").fadeOut(2000)
+		});
+	});
+</script>
+</html>
